@@ -1,1 +1,196 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Universo Café – Flor Planeta (con más granos)</title> <!-- Precarga de las imágenes con versionado --> <link rel="preload" href="https://hanariec.com/wp-content/uploads/2025/08/RosaBlanca-scaled.png?v=1" as="image"> <link rel="preload" href="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1" as="image"> <style> :root{ --planet-size: 40vmin; /* tamaño de la flor */ --bean-size: 70px; /* tamaño más grande de los granos */ --t1: 16s; --t2: 22s; --t3: 30s; --t4: 40s; --r1: 22vmin; --r2: 29vmin; --r3: 36vmin; --r4: 44vmin; } html, body { margin:0; } #coffee-universe-overlay { position: relative; width: 100%; height: 100vh; display: grid; place-items: center; overflow: hidden; } .stage{ position:relative; display:grid; place-items:center; } /* Flor planeta */ .planet{ width: var(--planet-size); height: var(--planet-size); display:grid; place-items:center; z-index:2; filter: drop-shadow(0 0 24px #ffffff40); animation: slow-tilt 18s ease-in-out infinite alternate; } .planet img{ width:100%; height:auto; display:block; } @keyframes slow-tilt{ 0%{ transform: rotate(0deg);} 100%{ transform: rotate(3deg);} } /* Órbitas */ .orbit{ position:absolute; width:0; height:0; } /* Satélites (granos) */ .sat { position:absolute; width: var(--bean-size); height: var(--bean-size); transform: translate(-50%, -50%); filter: drop-shadow(0 6px 10px rgba(0,0,0,.45)); animation: sizeChange 5s ease-in-out infinite alternate; /* Cambio de tamaño */ } .sat img{ width:100%; height:100%; object-fit:contain; display:block; } /* Variación de tamaño de los granos */ @keyframes sizeChange { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } } /* Órbitas de los granos */ .o1{ animation: spin var(--t1) linear infinite; } .o2{ animation: spin var(--t2) linear infinite reverse; } .o3{ animation: spin var(--t3) linear infinite; } .o4{ animation: spin var(--t4) linear infinite reverse; } @keyframes spin{ to{ transform: rotate(360deg);} } </style> </head> <body> <div id="coffee-universe-overlay"> <div class="stage"> <!-- Flor planeta sin lazy loading para carga inmediata --> <div class="planet"> <img alt="Flor planeta" src="https://hanariec.com/wp-content/uploads/2025/08/RosaBlanca-scaled.png?v=1"> </div> <!-- Órbitas de los granos --> <div class="orbit o1" style="--r:var(--r1);"> <div class="sat" style="left: calc(var(--r1)/2); top: 0;"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: 0; top: calc(var(--r1)/2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: var(--r1); top: calc(var(--r1)/2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: calc(var(--r1)/2); top: var(--r1);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> </div> <div class="orbit o2" style="--r:var(--r2);"> <div class="sat" style="left: 0; top: calc(var(--r2)/2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: var(--r2); top: calc(var(--r2)/2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: calc(var(--r2)/2); top: 0;"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: calc(var(--r2)/2); top: var(--r2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> </div> <div class="orbit o3" style="--r:var(--r3);"> <div class="sat" style="left: calc(var(--r3)); top: 0;"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: 0; top: calc(var(--r3));"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: var(--r3); top: calc(var(--r3));"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> </div> <div class="orbit o4" style="--r:var(--r4);"> <div class="sat" style="left: calc(var(--r4)/2); top: var(--r4);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: 0; top: calc(var(--r4)/2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div> <div class="sat" style="left: var(--r4); top: calc(var(--r4)/2);"> <img alt="Grano" src="https://hanariec.com/wp-content/uploads/2025/08/bean.png?v=1"> </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Rosa Floristería</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#fff8fa,#ffeef3);
+    color:#333;
+}
+
+/* Barra */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+    background:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.12);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+header img{
+    height:60px;
+}
+
+/* Principal */
+
+.hero{
+    min-height:100vh;
+    padding-top:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#7d2346;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    max-width:700px;
+    line-height:1.6;
+    color:#666;
+}
+
+.catalogo{
+    margin-top:45px;
+}
+
+.catalogo a{
+    display:inline-block;
+    text-decoration:none;
+    background:#b71c5a;
+    color:white;
+    padding:18px 45px;
+    border-radius:50px;
+    font-size:22px;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(183,28,90,.3);
+}
+
+.catalogo a:hover{
+    background:#96154a;
+    transform:translateY(-3px);
+}
+
+/* Whatsapp */
+
+.whatsapp{
+
+position:fixed;
+bottom:25px;
+right:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-size:38px;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:.3s;
+z-index:999;
+}
+
+.whatsapp:hover{
+transform:scale(1.08);
+}
+
+footer{
+margin-top:70px;
+padding:30px;
+text-align:center;
+color:#888;
+font-size:14px;
+}
+
+@media(max-width:700px){
+
+header{
+height:80px;
+}
+
+header img{
+height:50px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.catalogo a{
+font-size:18px;
+padding:15px 30px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logonegro.png" alt="La Rosa Floristería">
+
+</header>
+
+<section class="hero">
+
+<h1>La Rosa Floristería</h1>
+
+<p>
+
+Detalles florales diseñados para expresar amor, gratitud y los momentos más especiales de la vida.
+
+</p>
+
+<div class="catalogo">
+
+<a href="images/Catálogo.pdf" target="_blank">
+
+Ver catálogo
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 La Rosa Floristería
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/593984202840"
+target="_blank">
+
+💬
+
+</a>
+
+</body>
+</html>
