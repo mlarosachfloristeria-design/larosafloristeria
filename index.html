@@ -1,149 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>La Rosa Floristería</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:linear-gradient(135deg,#fff8fa,#ffeef3);
-    color:#333;
+
+font-family:'Poppins',sans-serif;
+background:#384B4C;
+color:white;
+
 }
 
-/* Barra */
+/*======================
+BARRA SUPERIOR
+======================*/
 
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:90px;
-    background:white;
-    box-shadow:0 3px 15px rgba(0,0,0,.12);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100px;
+background:white;
+display:flex;
+align-items:center;
+padding:0 45px;
+box-shadow:0 4px 18px rgba(0,0,0,.15);
+z-index:1000;
+
 }
 
 header img{
-    height:60px;
+
+height:78px;
+
 }
 
-/* Principal */
+/*======================
+CONTENIDO
+======================*/
 
 .hero{
-    min-height:100vh;
-    padding-top:120px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding-left:20px;
-    padding-right:20px;
+
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding-top:120px;
+padding-left:20px;
+padding-right:20px;
+
 }
 
 .hero h1{
-    font-size:50px;
-    color:#7d2346;
-    margin-bottom:15px;
+
+font-size:55px;
+font-weight:600;
+margin-bottom:18px;
+
 }
 
 .hero p{
-    font-size:22px;
-    max-width:700px;
-    line-height:1.6;
-    color:#666;
+
+font-size:22px;
+font-weight:300;
+max-width:760px;
+line-height:1.8;
+color:#F2F2F2;
+
 }
 
 .catalogo{
-    margin-top:45px;
+
+margin-top:45px;
+
 }
 
 .catalogo a{
-    display:inline-block;
-    text-decoration:none;
-    background:#b71c5a;
-    color:white;
-    padding:18px 45px;
-    border-radius:50px;
-    font-size:22px;
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(183,28,90,.3);
+
+display:inline-block;
+background:white;
+color:#384B4C;
+text-decoration:none;
+
+padding:18px 45px;
+
+border-radius:50px;
+
+font-size:21px;
+font-weight:600;
+
+transition:.30s;
+
+box-shadow:0 12px 30px rgba(0,0,0,.20);
+
 }
 
 .catalogo a:hover{
-    background:#96154a;
-    transform:translateY(-3px);
+
+transform:translateY(-4px);
+
 }
 
-/* Whatsapp */
+/*======================
+FOOTER
+======================*/
+
+footer{
+
+padding:35px;
+text-align:center;
+font-size:14px;
+opacity:.8;
+
+}
+
+/*======================
+WHATSAPP
+======================*/
 
 .whatsapp{
 
 position:fixed;
-bottom:25px;
-right:25px;
-width:70px;
-height:70px;
-border-radius:50%;
+
+right:28px;
+bottom:28px;
+
+width:72px;
+height:72px;
+
 background:#25D366;
+
+border-radius:50%;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 text-decoration:none;
-font-size:38px;
+
 color:white;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-transition:.3s;
-z-index:999;
+
+font-size:40px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+transition:.25s;
+
+z-index:9999;
+
 }
 
 .whatsapp:hover{
-transform:scale(1.08);
+
+transform:scale(1.1);
+
 }
 
-footer{
-margin-top:70px;
-padding:30px;
-text-align:center;
-color:#888;
-font-size:14px;
-}
+/*======================
+MÓVIL
+======================*/
 
-@media(max-width:700px){
+@media(max-width:768px){
 
 header{
-height:80px;
+
+height:85px;
+padding:0 20px;
+
 }
 
 header img{
-height:50px;
+
+height:60px;
+
 }
 
 .hero h1{
-font-size:34px;
+
+font-size:36px;
+
 }
 
 .hero p{
+
 font-size:18px;
+
 }
 
 .catalogo a{
+
 font-size:18px;
-padding:15px 30px;
+padding:16px 30px;
+
+}
+
+.whatsapp{
+
+width:64px;
+height:64px;
+font-size:35px;
+
 }
 
 }
+
 </style>
 
 </head>
@@ -162,7 +248,7 @@ padding:15px 30px;
 
 <p>
 
-Detalles florales diseñados para expresar amor, gratitud y los momentos más especiales de la vida.
+Creamos arreglos florales únicos para celebrar los momentos más importantes de tu vida. Descubre nuestro catálogo y encuentra el detalle perfecto.
 
 </p>
 
@@ -180,17 +266,19 @@ Ver catálogo
 
 <footer>
 
-© 2026 La Rosa Floristería
+© 2026 La Rosa Floristería · Todos los derechos reservados.
 
 </footer>
 
 <a class="whatsapp"
 href="https://wa.me/593984202840"
-target="_blank">
+target="_blank"
+aria-label="WhatsApp">
 
-💬
+<i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
 </body>
+
 </html>
