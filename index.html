@@ -24,6 +24,89 @@
 }
 </script>
 <style>
+.info{
+
+    max-width:900px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.info h2{
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+    font-weight:600;
+
+}
+
+.info ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.info li{
+
+    margin:18px 0;
+
+    font-size:22px;
+
+    font-weight:300;
+
+    letter-spacing:.4px;
+
+}
+
+.pagos{
+
+    margin-top:50px;
+
+}
+
+.pagos p{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.tarjetas{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    font-size:45px;
+
+    opacity:.9;
+
+}
+
+.tarjetas i{
+
+    transition:.3s;
+
+}
+
+.tarjetas i:hover{
+
+    transform:scale(1.12);
+
+}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Poppins,sans-serif;background:#384B4C;color:#fff}
 header{position:fixed;top:0;left:0;width:100%;height:90px;background:#fff;padding:0 30px;display:flex;align-items:center;box-shadow:0 3px 15px rgba(0,0,0,.15)}
@@ -44,17 +127,43 @@ footer{text-align:center;padding:30px;opacity:.8}
 <header><img src="images/logonegro.png" alt="La Rosa Floristería"></header>
 <section class="hero">
 <h1>La Rosa Floristería</h1>
-<p><strong>16 años de experiencia</strong> creando arreglos florales personalizados, decoración floral para eventos y entrega a domicilio en <strong>Latacunga, Cotopaxi</strong>.</p>
+<p><strong>Más de 16 años de experiencia</strong> creando diseños florales, transmitiendo emociones y acompañando a nuestros clientes en cada ocasión.
+</p>
 <a class="btn" href="images/Catálogo.pdf" target="_blank">Ver Catálogo</a>
 </section>
 <section class="info">
-<h2>Nuestros Servicios</h2>
-<ul>
-<li>Arreglos florales personalizados.</li>
-<li>Ramos con rosas, claveles, eucalipto y flores de temporada.</li>
-<li>Decoración floral para eventos y celebraciones.</li>
-<li>Servicio de entrega a domicilio en Latacunga.</li>
-</ul>
+<section class="info">
+
+    <h2>Nuestros Servicios</h2>
+
+    <ul>
+
+        <li>Diseños Florales Personalizados</li>
+
+        <li>Decoración de Eventos</li>
+
+        <li>Servicio a Domicilio en Latacunga</li>
+
+        <li>Asesoría para Bodas y Eventos Especiales</li>
+
+    </ul>
+
+    <div class="pagos">
+
+        <p>Aceptamos tarjetas de crédito y débito</p>
+
+        <div class="tarjetas">
+
+            <i class="fa-brands fa-cc-visa"></i>
+
+            <i class="fa-brands fa-cc-mastercard"></i>
+
+            <i class="fa-brands fa-cc-amex"></i>
+
+        </div>
+
+    </div>
+
 </section>
 <footer>© 2026 La Rosa Floristería</footer>
 <a class="whatsapp" href="https://wa.me/593984202840" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
